@@ -1,0 +1,569 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+#homepage{
+	width: 100%;
+}
+nav{
+	width:100%;
+	height:78px;
+	/*background: orange;*/
+}
+nav .navcontent{
+	margin: 0 auto;
+	width: 998px;
+	height: 78px;
+	line-height: 78px;
+}
+.logo{
+	float: left;
+	color: rgb(27,163,241);
+	
+	font-weight: 700;
+	font-size: 30px;
+	text-indent: 40px;
+	position: relative;
+}
+.logo::after{
+	content:"K";
+	position: absolute;
+	top:22px;
+	left: 0;
+	font-size: 25px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-indent: 6px;
+	border: 4px solid rgb(27,163,241);
+	border-radius: 50%;
+}
+.navright{
+	float: right;
+}
+.navright li{
+	float: left;
+	text-align: right;
+	margin-left: 32px;
+}
+.navright li a{
+	color: rgb(119,119,119);
+	font-size: 13px;
+}
+.navright li a:hover{
+	color: rgb(71,182,246);
+}
+
+/*内容部分*/
+.content{
+	width: 100%;
+}
+
+/* 内容导航部分*/
+.content .ct_nav{
+	width: 100%;
+	height: 56px;
+	background-color: rgb(44,50,59);
+	
+}
+.ct_nav .ct_navct{
+	width: 998px;
+	height: 56px;
+	margin: 0 auto;
+}
+.ct_navct div > ul > li{
+	float: left;
+	height: 56px;
+	line-height: 56px;
+}
+.ct_navct .ct_navleft{
+	float: left;
+}
+.ct_navct .ct_navleft >ul >li:hover{
+	background-color: rgb(12,142,217);
+}
+.ct_navct .ct_navleft li.select{
+	background-color: rgb(12,142,217);
+}
+.ct_navct .ct_navleft > ul > li > a{
+	padding: 0 30px;
+	font-size: 16px;
+	color: white;
+}
+.ct_navleft > ul > li:nth-of-type(4){
+	position: relative;
+}
+.ct_navleft > ul > li:nth-of-type(4):hover ul{
+	display: block;
+	z-index: 100;
+}
+.ct_navleft > ul > li:nth-of-type(4):hover a i{
+	transform:rotate(180deg);
+-ms-transform:rotate(180deg); /* Internet Explorer */
+-moz-transform:rotate(180deg); /* Firefox */
+-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+-o-transform:rotate(180deg); /* Opera */
+}
+.ct_navleft .more{
+	display: none;
+	position: absolute;
+	top:56px;
+	left: 0;
+}
+.ct_navleft .more li{
+	background-color: rgb(37,43,52);
+	width: 112.5px;
+}
+.ct_navleft .more li a{
+	display: block;
+	width: 106px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	color: rgb(187,187,187);
+}
+.ct_navleft .more li:hover{
+	background-color: rgb(45,52,61);
+}
+.ct_navleft .more li:hover a{
+	color: white;
+}
+.ct_navright{
+	float: right;
+}
+.ct_navright li a{
+	text-align: right;
+	padding: 0 0 0 30px;
+	color: rgb(187,187,187);
+	font-size: 13px;
+}
+.ct_navright li a:hover{
+	color: rgb(20,169,255);
+}
+
+/*轮播部分*/
+.swiperPanel,.swiper-container,.swiper-wrapper{
+	width:100%;
+	height: 500px;
+}
+.swiperPanel .swiper-slide{
+	width:100%;
+	height: 500px;
+	background-repeat: no-repeat;
+	background-size: 100% 500px;
+}
+
+/*歌单部分*/
+.music{
+	width:998px;
+	height: 425px;
+	margin: 0 auto;
+}
+.music header{
+	height: 100px;
+	line-height: 100px;
+}
+.music header h1{
+	float: left;
+	font-weight: lighter;
+}
+.music header h1 span{
+	color: rgb(16,160,245);
+}
+.music header a{
+	float: right;
+}
+.music .delicate{
+	float: left;
+	width: 655px;
+	height: 100%;
+}
+.delicate .delicate_ct, .hot .hot_ct{
+	width: 100%;
+	height: 325px;
+}
+.delicate_ct > div{
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	width: 158px;
+	height: 160px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	cursor: pointer;
+}
+.delicate_ct > div:after{
+	content:"";
+	display: none;
+	height: 100%;
+	width: 100%;
+	z-index: 9999;
+	background-color: rgba(0,0,0,0.5);
+}
+.delicate_ct > div:hover:after{
+	display: block;
+}
+.delicate_ct > div:hover .play.iconfont{
+	display: block;
+}
+.delicate_ct >div:nth-of-type(1){
+	width: 324px;
+	height: 325px;
+	margin-bottom: 0;
+	background-image: url('http://imge.kugou.com/soft/collection/480/20161007/20161007233620550545.jpg');
+}
+.delicate_ct >div:nth-of-type(2){
+	background-image: url('http://imge.kugou.com/soft/collection/150/20150104/20150104143732904232.jpg');
+}
+.delicate_ct >div:nth-of-type(3){
+	background-image: url('http://imge.kugou.com/soft/collection/150/20160712/20160712163532193469.jpg');
+}
+.delicate_ct >div:nth-of-type(4){
+	background-image: url('http://imge.kugou.com/soft/collection/150/20150803/20150803111247314632.jpg');
+}
+.delicate_ct >div:nth-of-type(5){
+	background-image: url('http://imge.kugou.com/soft/collection/150/20160124/20160124152501661508.jpg');
+}
+.delicate_ct > div .number{
+	position: absolute;
+	top:0;
+	left: 0;
+	height: 30px;
+	width: inherit;
+	line-height: 30px;
+	text-align: right;
+	font-size: 14px;
+	color: white;
+	background-color: rgba(0,0,0,0.3);
+}
+.delicate_ct > div .manual{
+	position: absolute;
+	left:0;
+	bottom: 0;
+	height: 50px;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 7px 10px;
+	font-size: 14px;
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+}
+.delicate_ct > div .manual p{
+	width: 94px;
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+}
+.delicate_ct > div .manual .play{
+	right: 9px;
+	top: 7px;
+}
+.delicate_ct > div .manual .play,
+.hot_ct li a .play,
+.songmv > div .play{
+	display: none;
+	position: absolute;
+	width: 33px;
+	height: 33px;
+	line-height: 33px;
+	text-indent: 11px;
+	border-radius: 50%;
+	border: 2px solid rgba(200,200,200,0.7);
+}
+.delicate_ct > div .manual .play:hover,
+.hot_ct li a .play:hover,
+.songmv > div .play:hover{
+	border: 2px solid rgba(255,255,255,1);
+}
+.music .hot{
+	float: right;
+	height: 100%;
+	width: 320px;
+}
+.music header a{
+	font-size: 13px;
+	color: rgb(153,153,153);
+}
+.hot .hot_ct ul{
+	width: 100%;
+	height: 100%;
+}
+.hot .hot_ct ul li{
+	height: 100px;
+	width: 100%;
+	margin-bottom: 12px;
+}
+.hot .hot_ct ul li a{
+	display: block;
+	height: 100px;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 15px 0 0 110px;
+	font-size: 14px;
+	color: rgb(85,85,85);
+	background-repeat: no-repeat;
+	background-size: 100px 100px;
+	background-color: rgb(246,246,246);
+	position: relative;
+}
+.hot .hot_ct ul li a:after,.songmv > div:after{
+	content:"";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 100px;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+.hot .hot_ct ul li a:hover:after,.songmv > div:hover:after{
+	display: block;
+}
+.hot .hot_ct ul li a:hover .play{
+	display: block;
+}
+.hot_ct li a .play.iconfont{
+	color: white;
+	top: 33px;
+	left: 33px; 
+	z-index: 9999;
+}
+.hot_ct li a h4{
+	color: black;
+	font-size: 15px;
+	margin-bottom: 5px;
+}
+.hot_ct li a p{
+	width: 175px;
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	margin-bottom: 6px;
+}
+.hot_ct li a i{
+	position: absolute;
+	width: 12px;
+	height: 100px;
+	top:0;
+	right:15px;
+	line-height: 100px;
+}
+.hot .hot_ct ul li:nth-of-type(1) a{
+	background-image: url('http://imge.kugou.com/v2/rank_cover/T1KpY4BgxT1RCvBVdK.jpg_240x240.jpg');
+}
+.hot .hot_ct ul li:nth-of-type(2) a{
+	background-image: url('http://imge.kugou.com/v2/rank_cover/T1M4h4BKKj1RCvBVdK.jpg_240x240.jpg');
+}
+.hot .hot_ct ul li:nth-of-type(3) a{
+	background-image: url('http://imge.kugou.com/v2/rank_cover/T1fHd4BXd_1RCvBVdK.jpg_240x240.jpg');
+}
+
+/*广告*/
+.advertisement{
+	width: 998px;
+	margin: 12px auto;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.t1{
+	height: 80px;
+	background-image: url('../img/hardware.jpg');
+}
+.t2{
+	height: 100px;
+	background-image: url('../img/T1OjC7B_Cs1RCvBVdK.jpg');
+}
+
+/*新歌首发  歌曲MV*/
+.song{
+	width: 998px;
+	height: 415px;
+	margin: 20px auto;
+}
+.song .newsong{
+	float: left;
+	height: 100%;
+	width: 655px;
+}
+.newsong header{
+	height: 68px;
+	width: 100%;
+	border-bottom: 1px solid rgb(245,245,245);
+	position: relative;
+}
+.newsong > span{
+	position: absolute;
+	bottom: -390px;
+	left: 307px;
+	color: red;
+}
+.song header h1{
+	float: left;
+	font-weight: 100;
+	line-height: 68px;
+}
+.newsong header .alltoplay{
+	position: absolute;
+	top: 18px;
+	right: 0;
+	width: 90px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: rgb(85,85,85);
+	border: 1px solid rgb(219,219,219);
+	border-radius: 3px;
+	cursor: pointer;
+}
+.newsong header .alltoplay:hover{
+	color: rgb(0,154,243);
+	border-color: rgb(0,154,243);
+}
+.song header > h1 span{
+	color: rgb(23,160,243);
+}
+.newsong header .list{
+	float: right;
+	width: 510px;
+	height: 68px;
+	line-height: 68px;
+	position: relative;
+} 
+.newsong header .list > li{
+	float: left;
+	padding-left: 10px;
+	padding-right: 30px;
+}
+.newsong header .list > li > a{
+	color: black;
+}
+.newsong header .list > li ul{
+	display: none;
+	position: absolute;
+	top:78px;
+	left:-145px;
+	width: 655px;	
+}
+.newsong header .list > li ul li{
+	height: 35px;
+	width: 100%;
+	line-height: 35px;
+	text-indent: 12px;
+}
+.newsong header .list > li ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	color: rgb(51,51,51);
+}
+.newsong header .list > li ul li a:hover{
+	color: rgb(0,154,243);
+	background-color: rgb(245,248,251);
+}
+.song .songmv{
+	float: right;
+	height: 100%;
+	width: 320px;
+}
+.songmv header{
+	width: 100%;
+	height: 68px;
+	line-height: 68px;
+}
+.songmv header > a{
+	float: right;
+	color: rgb(187,187,187);
+}
+.songmv > div{
+	position: relative;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.songmv > div:after{
+	width: 100%;
+}
+.songmv > div:nth-of-type(2):after,.songmv > div:nth-of-type(3):after{
+	height: 85px;
+}
+.songmv > div:nth-of-type(1){
+	height: 175px;
+	width: 100%;
+	margin-bottom: 12px;
+	background-image: url('http://imge.kugou.com/mvhdpic/400/20161008/20161008173234267826.jpg');
+	background-size: 320px 175px;
+}
+.songmv > div:hover .play{
+	display: block;
+}
+.songmv > div .play.iconfont{
+	width: 42px;
+	height: 42px;
+	text-indent: 15px;
+	line-height: 42px;
+	color: white;
+	top: 20px;
+	left: 56px;
+	z-index: 9999;
+}
+.songmv > div:nth-of-type(1) .play.iconfont{
+	top: 68px;
+	left: 143px;
+}
+.songmv > div .explain{
+	position: absolute;
+	left: 0;
+	bottom:0;
+	height:40px;
+	width:100%;
+}
+.songmv > div .explain p{
+	text-indent: 5px;
+	font-size: 14px;
+	color: rgb(51,51,51);
+}
+.songmv > div:nth-of-type(1) .explain{
+	position: absolute;
+	left: 0;
+	bottom:0;
+	height:50px;
+	width:100%;
+	background-color: rgba(51,51,51,0.5);
+}
+.songmv > div:nth-of-type(1) .explain p{
+	color: white;
+}
+.explain span{
+	padding-left: 5px;
+	color: rgb(165,165,165);
+}
+.songmv > div:nth-of-type(2){
+	float: left;
+	width: 155px;
+	height: 125px;
+	background-image: url('http://imge.kugou.com/commendpic/20161008/20161008103329973751.jpg');
+	background-repeat: no-repeat;
+	background-size: 155px 85px;
+	
+}
+.songmv > div:nth-of-type(3){
+	float: right;
+	width: 155px;
+	height: 125px;
+	background-image: url('http://imge.kugou.com/commendpic/20161008/20161008103149126441.jpg');
+	background-repeat: no-repeat;
+	background-size: 155px 85px;
+}
+
+
+
+
+
